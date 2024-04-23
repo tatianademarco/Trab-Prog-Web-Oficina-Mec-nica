@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+body {
+    font-family: Tahoma;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;
+}
+
+header li {
+    display: inline-block;
+    margin: 10px;
+}
+
+header a {
+    color: #1c5fa8;
+}
+
+header a:hover {
+    color: #ffd700;
+    transition: 0.3s all;
+}
+
+#info-box {
+    background-color: #1c5fa8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+}
+
+#info-box h3, h2, p {
+    color: #fff;
+}
+
+#avaliar-box {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#numero {
+    font-weight: bold;
+}
+
+#botao-avaliacao {
+    cursor: pointer;
+    height: 1.2rem;
+    width: 12rem;
+    padding: 25px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #fff;
+    background-color:#1c5fa8;
+    display: flex;
+    align-items: center;
+}
+
+#sobre {
+    background-color: #f4f4f4;
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#text-sobre {
+    width: 67%;
+}
+
+#sobre h1 {
+    padding-bottom: 60px;
+}
+
+#sobre h1::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 0.25rem;
+    background-color: #1c5fa8;
+    margin: 4px auto;
+    position: absolute;
+}
+
+main p{
+    line-height: 25px;
+}
+
+#sobre p {
+    color: #333;
+    padding-bottom: 30px;
+}
+
+#sobre img {
+    max-width: 30%;
+    width: auto;
+}
+
+#serviços {
+    padding: 50px 150px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#text-serviços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#serviços p {
+    color: #212529;
+    padding: 15px 208px;
+    text-align: center;
+}
+
+#serviços h1::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 0.23rem;
+    background-color: #1c5fa8;
+    margin: 4px auto;
+    position:relative;
+}
+
+#imagens-serviços {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.imagem-serviço {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25%;
+}
+
+.imagem-serviço img{
+    cursor: pointer;
+    max-width: 83%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.imagem-serviço img:hover{
+    max-width: 87%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 5px solid #1c5fa8;
+    margin-bottom: auto;
+}
+
+#form-contato {
+    background-color: #1c5fa8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 150px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#form-contato h1 {
+    color: #fff;
+}
+
+form {
+    width: 100%;
+}
+
+#form-contato h1::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 0.23rem;
+    background-color:#ffd700;
+    margin: 4px auto;
+    position:relative;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.form-label{
+    color: #ffd700;
+    padding-bottom: 5px;
+}
+
+.form-control {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+#mensagem {
+    height: 100px;
+}
+
+#form-contato button {
+    background-color: #ffd700;
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    height: 20px;
+    padding: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#contato h3 {
+    padding-bottom: 10px;
+}
+
+#footer {
+    background-color: #1c5fa8;
+    border-top: 2px solid #fff;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+footer h3, p, a {
+    color: #fff;
+}
+
+#redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+footer li {
+    display: inline-block;
+    margin: 10px;
+}
+
+@media screen and (max-width:1200px) {
+
+    #info-box, #serviços, #sobre, #footer, header, #form-contato{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #text-info {
+        padding-right: 20px;
+    }
+
+    #avaliar-box {
+        /*flex-direction: column;*/
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 40%;
+        align-items:center;
+        #numero{
+            padding-bottom: 20px;
+        }
+    }
+
+    #serviços p {
+        padding: 15px 100px;
+    }
+
+    .imagem-serviço h4 {
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+}
+
+@media screen and (max-width:754px) {
+    #sobre {
+        flex-direction: column;
+
+        img {
+            max-width: 65%;
+        }
+    }
+
+    #imagens-serviços {
+        flex-wrap: wrap;
+    }
+
+    .imagem-serviço {
+        max-width: 50%;
+
+        img {
+            margin-bottom: 5px;
+        }
+
+        h4 {
+           padding-bottom: 20px;
+        }
+    }
+
+    #text-sobre {
+        width: 100%;
+    }
+
+    #serviços p {
+        padding: 10px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: start;
+
+        #redes-sociais {
+            padding-top: 15px;
+            align-items: start;
+
+            li{
+                margin: 0;
+                padding-right: 25px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:570px) {
+    header {
+        flex-direction: column;
+        padding: 15px 50px;
+
+        ul {
+            padding-top: 30px;
+        }
+
+        img {
+            padding-top: 10px;
+        }
+    }
+
+    #info-box {
+        flex-direction: column;
+    }
+
+    #avaliar-box {
+        flex-direction: row;
+        width: 100%;
+        padding-top: 30px;
+        align-items: center;
+
+        #numero {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    #avaliar-box {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 30px;
+        align-items: start;
+
+        #numero {
+            padding-bottom: 30px;
+        }
+    }
+}
